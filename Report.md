@@ -43,5 +43,5 @@ The carry “ripples” through the chain, hence the name.
 Rule 90 is a one-dimensional cellular automaton with interesting properties.
 The rules are simple. There is a one-dimensional array of cells (on or off). At each time step, the next state of each cell is the XOR of the cell's two current neighbours. A more verbose way of expressing this rule is the following table, where a cell's next state is a function of itself and its two neighbours.
 The name "Rule 90" comes from reading the "next state" column: 01011010 is decimal 90.
-![]()
+![](IMG-20250905-WA0002.jpg)
 [Github Codes]()
