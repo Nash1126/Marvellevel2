@@ -11,22 +11,25 @@ Verilog is a hardware description language (HDL) used to design and model digita
 1. Structural Modelling: Describe how gates/wires are connected.
 2. Behavioral Modelling Describe circuit behavior using always blocks, if, case, etc.
 3. Dataflow Modelling: Use Boolean expressions.
-**Task 1**Design and test an 8-bit signed arithmetic unit with operations:
+
+**Task 1**:Design and test an 8-bit signed arithmetic unit with operations:
 Addition (00),Subtraction (01),Comparison (10) & Absolute difference (11)
 Generate 3 status flags: overflow, zero, negative
 **Outcomes and Process**
 - Using of case statemes for each operation.
 - Assigning status for each flag.
 - Getting familiar with AMD Vivado .
-![]()
-**Task2**Design a 2D Population Count Circuit that analyzes a 4×4 binary matrix and provides comprehensive bit counting statistics.
+![](IMG-20250811-WA0001.jpg)
+
+**Task2**:Design a 2D Population Count Circuit that analyzes a 4×4 binary matrix and provides comprehensive bit counting statistics.
 A population count (often called Hamming weight, bit count, or ones count) is the process of counting the number of 1s in the binary representation of a number.
 **Outcomes and Process**
   - Using of 4X4 matrix and changing its possible values.
   - Obtain the count of ones in it.
   - The population count has been done.
-![]()
-**Task 3**Design and test a 4-bit Ripple Carry Adder using a Generate Block. Each gate has a Rise, Fall, and Turn-Off Delay of 3ns, 6ns, and 2ns respectively.
+![](IMG-20250811-WA0002.jpg)
+
+**Task 3**:Design and test a 4-bit Ripple Carry Adder using a Generate Block. Each gate has a Rise, Fall, and Turn-Off Delay of 3ns, 6ns, and 2ns respectively.
 **Note** The version in MARVEL does not support 3 delays i.e Rise,fall and Turn off. I had to do with 2 delays.
 - A Ripple Carry Adder is a type of digital circuit used to add two binary numbers. It’s built by connecting full adders in series.
 - Each full adder adds 2 input bits + a carry-in.
@@ -37,7 +40,8 @@ The carry “ripples” through the chain, hence the name.
 **Outcomes**
   - Module Instantiation
   - Usage of delays
-![]()
+![](IMG-20250905-WA0001.jpg)
+
 **Bonus Challenge** Design and test a Cellular Automaton of your choice: Rule 90, Rule 110, or 16x16 Conway's Game of Life.
 **Rule 90**
 Rule 90 is a one-dimensional cellular automaton with interesting properties.
