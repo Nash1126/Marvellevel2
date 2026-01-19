@@ -49,3 +49,115 @@ The rules are simple. There is a one-dimensional array of cells (on or off). At 
 The name "Rule 90" comes from reading the "next state" column: 01011010 is decimal 90.
 ![](IMG-20250905-WA0002.jpg)
 [Github Codes](https://github.com/Nash1126/digitaldna)
+
+# Logic Lore
+
+**Prerequisite:** Level 1 Task 10 - LUTs
+
+**Objective:** Exploring FPGA Architecture
+
+**Task:** Understand the following theoretically:
+- Basic Xilinx Architecture
+- Configurable Logic Block (CLB)
+- Switch Matrix
+- How they combine with memory to form a basic FPGA tile
+
+# Basic Xilinx FPGA Architecture (Theoretical Overview)
+
+This document explains the **theoretical structure** of a Xilinx FPGA, focusing on:
+- Configurable Logic Blocks (CLBs)
+- Switch Matrices
+- Configuration Memory
+- How these combine to form a basic FPGA tile
+
+## 1. Basic Xilinx Architecture (Big Picture)
+
+A Xilinx FPGA is organized as a **two-dimensional grid of programmable tiles**.
+
+Each tile contains:
+- **Configurable Logic Blocks (CLBs)** – computation
+- **Switch matrices** – routing and interconnection
+- **Configuration memory (SRAM)** – defines behavior
+
+### Key Characteristics
+- Logic is **distributed**
+- Hardware functionality is **defined after fabrication**
+- The FPGA is programmed by loading configuration bits at power-up
+
+## 2. Configurable Logic Block (CLB)
+
+The **CLB** is the primary logic element of the FPGA.
+
+### Purpose
+Implements **combinational and sequential digital logic**.
+
+### Main Components
+- **Look-Up Tables (LUTs)**
+  - SRAM-based truth tables
+  - Implement arbitrary Boolean functions
+  - Example: a 6-input LUT can implement any 6-input logic function
+
+- **Flip-Flops (Registers)**
+  - Store state
+  - Used in counters, FSMs, pipelines
+
+- **Carry Logic**
+  - Dedicated fast paths for arithmetic operations
+
+- **Local Multiplexers**
+  - Select between LUT outputs, registers, and carry chains
+
+## 3. Switch Matrix (Routing Fabric)
+
+The **switch matrix** provides programmable interconnection between logic blocks.
+
+### Purpose
+Enables **flexible routing of signals** across the FPGA.
+
+### Components
+- Horizontal and vertical routing tracks
+- Programmable switches (multiplexers / pass transistors)
+- Connection points to:
+  - CLBs
+  - Other tiles
+  - I/O blocks
+  - Memory and DSP blocks
+
+## 4. Configuration Memory
+
+Configuration memory controls both logic and routing.
+
+### Characteristics
+- Typically **SRAM-based**
+- Millions of bits distributed across the FPGA
+- Volatile (lost on power-down)
+
+### Controls
+Configuration bits define:
+- LUT truth tables
+- Flip-flop behavior (enable, reset, clocking)
+- Routing switch connections
+- Clock and I/O behavior
+
+## 5. FPGA Tile Structure
+
+An **FPGA tile** is the fundamental repeating unit of the fabric.
+
+### Tile Contents
+- One or more **CLBs**
+- A surrounding **switch matrix**
+- Associated **configuration memory**
+
+### Functional Flow
+1. Configuration memory programs logic and routing
+2. CLBs perform computation
+3. Switch matrices route signals between tiles
+
+
+## 6. How Tiles Form the FPGA
+
+- Tiles are arranged in a **2D grid**
+- Specialized tiles (BRAM, DSP, I/O) are interspersed
+- Global routing and clock networks span multiple tiles
+
+
