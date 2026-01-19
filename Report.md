@@ -181,4 +181,73 @@ From the Logic Lore task,I have implemented a simple FPGA Tile using AMD Vivado.
 [Github Codes](https://github.com/Nash1126/fpga)
 ![](bfe513d2-16cd-492d-91d8-0e18d7fd5260.jpg)
 
+# The Great Timing Heist
+
+**Prerequisite:** Digital DNA Level 2 Task 3
+
+**Objective:** Mastering Static Timing Analysis
+
+**Task:** Delve into Static Timing Analysis (STA) using Intel Quartus or AMD Vivado. Learn key concepts like setup/hold times, slack, and critical paths. Apply this knowledge by analyzing timing reports of a sample design and identifying potential timing violations.
+
+## Static Timing Analysis (STA) in Intel Quartus & AMD Vivado
+
+This document provides a **practical, tool-focused introduction to Static Timing Analysis (STA)** using **Intel Quartus (TimeQuest)** and **AMD Vivado**. It covers core concepts, report interpretation, and real-world timing violation analysis.
+
+---
+
+## 1. What is Static Timing Analysis (STA)?
+
+**Static Timing Analysis (STA)** verifies that a digital design meets all timing requirements **without simulation**.  
+It mathematically analyzes **all timing paths** under worst-case conditions.
+
+STA considers:
+- Clock definitions and relationships
+- Logic and routing delays
+- Setup and hold constraints
+- Process, voltage, and temperature (PVT) corners
+
+
+## 2. Core Timing Concepts
+
+### 2.1 Setup Time
+The minimum time data must be stable **before** the active clock edge.
+
+**Violation:** Data arrives too late.
+
+**Equation:** Data Arrival Time ≤ Clock Period − Setup Time
+
+
+### 2.2 Hold Time
+The minimum time data must remain stable **after** the active clock edge.
+
+**Violation:** Data changes too early.
+
+**Equation:** Data Arrival Time ≥ Hold Time
+
+
+### 2.3 Slack
+Slack indicates timing margin.
+
+Slack = Required Time − Arrival Time
+
+
+| Slack | Meaning |
+|------|--------|
+| > 0  | Timing met |
+| = 0  | Barely met |
+| < 0  | Timing violation |
+
+
+### 2.4 Critical Path
+The **path with the worst (smallest or most negative) slack**.  
+It determines the **maximum achievable clock frequency (Fmax)**.
+
+### 2.5 Common Timing Path Types
+- Register → Register
+- Input → Register
+- Register → Output
+- Clock paths (for skew analysis)
+
+
+
 
