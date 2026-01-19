@@ -21,7 +21,7 @@ Generate 3 status flags: overflow, zero, negative
 - Getting familiar with AMD Vivado .
 ![](IMG-20250811-WA0001.jpg)
 
-**Task2**:Design a 2D Population Count Circuit that analyzes a 4×4 binary matrix and provides comprehensive bit counting statistics.
+**Task 2**:Design a 2D Population Count Circuit that analyzes a 4×4 binary matrix and provides comprehensive bit counting statistics.
 A population count (often called Hamming weight, bit count, or ones count) is the process of counting the number of 1s in the binary representation of a number.
 **Outcomes and Process**
   - Using of 4X4 matrix and changing its possible values.
@@ -62,7 +62,7 @@ The name "Rule 90" comes from reading the "next state" column: 01011010 is decim
 - Switch Matrix
 - How they combine with memory to form a basic FPGA tile
 
-# Basic Xilinx FPGA Architecture (Theoretical Overview)
+## Basic Xilinx FPGA Architecture (Theoretical Overview)
 
 This document explains the **theoretical structure** of a Xilinx FPGA, focusing on:
 - Configurable Logic Blocks (CLBs)
@@ -159,5 +159,23 @@ An **FPGA tile** is the fundamental repeating unit of the fabric.
 - Tiles are arranged in a **2D grid**
 - Specialized tiles (BRAM, DSP, I/O) are interspersed
 - Global routing and clock networks span multiple tiles
+
+![]()
+
+# Silicon Sandbox
+
+**Prerequisite:** Logic Lore Level 2 Task 5
+
+**Objective:** To build a simple, single FPGA tile and simulate it using Verilog
+
+**Tasks:**
+- Design the CLB Module (LUT + D Flip-Flop)
+- Design the Switch Matrix (4x4 programmable mux)
+- Design the top-level FPGA Tile module
+- Write the testbench code and verify the timing diagram.
+  
+**Platform:** Intel Quartus Design Suite or AMD Vivado Design Suite.
+
+From the Logic Lore task,I have implemented a simple FPGA Tile using AMD Vivado.
 
 
