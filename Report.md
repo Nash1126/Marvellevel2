@@ -178,4 +178,7 @@ An **FPGA tile** is the fundamental repeating unit of the fabric.
 
 From the Logic Lore task,I have implemented a simple FPGA Tile using AMD Vivado.
 
+[Githu Codes](https://github.com/Nash1126/fpga)
+![]()
+
 
